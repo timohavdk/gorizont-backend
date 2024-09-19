@@ -63,7 +63,7 @@ export class ArticlesController {
   @Post()
   @Header('Cache-Control', 'none')
   @HttpCode(201)
-  create(@Body() createArticleDto: CreateArticleDto): MutationResultArticleDto {
-    return this.articleService.create(createArticleDto);
+  async create(@Body() createArticleDto: CreateArticleDto) {
+    return await this.articleService.create(createArticleDto);
   }
 }

@@ -2,5 +2,7 @@
 create table if not exists Articles (
 	id UUID PRIMARY KEY,
 	title TEXT,
-	description TEXT
-);
+	text TEXT,
+    createdAt DATETIME,
+    updatedAt DATETIME
+)
